@@ -1,0 +1,21 @@
+server:
+  servlet:
+    context-path: /catalog-service
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5410/product_catalog
+    username: catalog_service
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+     hibernate:
+      show_sql: true
+      format_sql: true
+  flyway:
+    baseline-on-migrate: true
