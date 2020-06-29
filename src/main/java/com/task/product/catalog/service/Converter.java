@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 
 public abstract class Converter<E, D> {
 
-    abstract public D convertEntityToDto(E entity);
+    public abstract D convertEntityToDto(E entity);
 
-    abstract public E convertDtoToEntity(D dto);
+    public abstract E convertDtoToEntity(D dto);
 
     public List<D> convertEntityListToDtoList(final List<E> entityList) {
         return entityList.stream()
@@ -26,3 +26,4 @@ public abstract class Converter<E, D> {
         return null;
     }
 }
+
